@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
+import QuizApp from './components/QuizApp';
 import './App.css';
+import './style.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <h2>Test</h2>
-      </div >
+        <QuizApp totalQuestions={10} />
+      </div>
     );
   }
 }

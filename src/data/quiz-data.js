@@ -17,7 +17,7 @@ const QUESTION_DATA = [
       <span>Vrai</span>,
       <span>Faux</span>
     ],
-    correct: 0
+    correct: 1
   },
   {
     question: <span>Selon la légende, si l'oeuf cosmique reste enterré pendant cent ans que se passe t-il ?</span>,
@@ -61,9 +61,9 @@ const QUESTION_DATA = [
   {
     question: <span>La ville d'Egg existe. Où se situe-t-elle ?</span>,
     answers: [
-      <span></span>,
+      <span>En France à Egg</span>,
       <span>Suisse & Autriche</span>,
-      <span></span>,
+      <span>Minas Morgul & Poudlard</span>,
       <span>C'est dans ton propre subsconscient</span>
     ],
     correct: 3

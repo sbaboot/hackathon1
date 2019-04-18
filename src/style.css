@@ -33,13 +33,6 @@ h2 {
   margin: 0 0 15px;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 20px;
-}
-
 .App .question {
   text-align: left;
 }
@@ -47,7 +40,13 @@ header {
 .question-title {
   text-align: center;
 }
+
 .wrapper header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
   color: white;
 }
 

@@ -9,8 +9,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <QuizApp totalQuestions={5} />
         <Switch>
+          <Route path="/Quiz" render={props => <QuizApp {...props} totalQuestions={5} />} />
           <Route path="/" component={Home} />
         </Switch>
       </div>

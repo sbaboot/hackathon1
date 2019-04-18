@@ -55,7 +55,9 @@ class Home extends Component {
               <Button className="btnTryAgain" color="warning" onClick={this.componentDidMount}>Try Again</Button>
             </Container>
             <Container>
-              <Button className="btnLetsGo" color="warning">Let's go !!</Button>
+              <Link to='/Quiz'>
+                <Button className="btnLetsGo" color="warning">Let's go !!</Button>
+              </Link>
             </Container>
           </div>
         </div>

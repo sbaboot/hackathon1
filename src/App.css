@@ -7,6 +7,10 @@
   font-family: 'Handlee', cursive;
 }
 
+.wrapper {
+font-family: 'Handlee';
+}
+
 .borderTitle { 
   color : white;
   text-align: center;

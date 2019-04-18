@@ -150,6 +150,7 @@ class QuizApp extends Component {
 
   render() {
     const { step, questions, userAnswers, totalQuestions, score, modal } = this.state;
+    const { characters } = this.props;
 
     if (step >= totalQuestions + 1) {
       return (
@@ -161,6 +162,20 @@ class QuizApp extends Component {
       );
     } else return (
       <Fragment>
+        <img
+          src={this.props.characters.image}
+          alt='profilPicture'
+          style={{
+            position: 'fixed',
+            left: '40rem',
+            marginTop: '1rem',
+            borderRadius: '100%',
+            width: '8rem',
+            height: '10rem',
+            objectFit: 'cover'
+
+          }}
+        />
         <Quiz
           step={step}
           questions={questions}

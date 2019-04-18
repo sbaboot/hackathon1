@@ -54,7 +54,7 @@ const QUESTION_DATA = [
     answers: [
       <span>De retour du futur Marty McFly ?</span>,
       <span>Date de naissance invalide</span>,
-      <span>Salut Jordi</span>,
+      <span>Salut bébé</span>,
     ],
     correct: 0
   },

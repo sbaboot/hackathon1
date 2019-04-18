@@ -4,28 +4,8 @@ import { Link } from "react-router-dom";
 import "../App.css";
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      characters: {}
-    };
-    this.componentDidMount = this.componentDidMount.bind(this);
-  }
-
-  componentDidMount() {
-    fetch("http://easteregg.wildcodeschool.fr/api/characters/random", {
-      crossDomain: true
-    })
-      .then(response => response.json())
-      .then(data => {
-        this.setState({
-          characters: data
-        });
-      });
-  }
-
   render() {
-    const { characters } = this.state;
+    const { characters } = this.props;
     return (
       <div className="header">
         <div className="borderTitle">
@@ -61,7 +41,7 @@ class Home extends Component {
               <Button
                 className="btnTryAgain mr-3"
                 color="warning"
-                onClick={this.componentDidMount}
+                onClick={this.props.chooseYourCharacter}
               >
                 Choisis un autre avatar
               </Button>

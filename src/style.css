@@ -10,7 +10,7 @@ body {
   width: 100%;
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 9px;
-  background-image: url('https://cdn.pixabay.com/photo/2012/12/16/11/18/celebration-70199_960_720.jpg');
+  background-image: url('./images/celebration-70199_960_720.jpg');
   background-size : 100%;
   background-repeat: no-repeat;
   height: 50%;

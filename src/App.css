@@ -1,7 +1,7 @@
 /*Home */
 
 .header {
-  background-image: url("https://cdn.pixabay.com/photo/2012/12/16/11/18/celebration-70199_960_720.jpg"); 
+  background-image: url('./images/celebration-70199_960_720.jpg'); 
   background-size : 100%; 
   background-repeat: no-repeat;
   font-family: 'Handlee', cursive;

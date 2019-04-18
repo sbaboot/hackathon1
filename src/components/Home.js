@@ -5,7 +5,6 @@ import {
 import { Link } from 'react-router-dom';
 import '../App.css';
 
-
 class Home extends Component {
   constructor(props) {
     super(props);

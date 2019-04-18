@@ -1,18 +1,16 @@
 /*Home */
-body {
-  font-family: 'Handlee', cursive;
-}
+
 .header {
   background-image: url("https://cdn.pixabay.com/photo/2012/12/16/11/18/celebration-70199_960_720.jpg"); 
   background-size : 100%; 
   background-repeat: no-repeat;
-
+  font-family: 'Handlee', cursive;
 }
 
 .borderTitle { 
   color : white;
   text-align: center;
-  padding: 5% 7% 50% 7%; 
+  padding: 5% 7% 7% 7%;
 }
 
 .headerTitle {
@@ -39,6 +37,7 @@ body {
 .charactersImg {
   border-radius : 100%; 
   width: 15rem; 
+  height : 15rem;
 }
 
 .btnTryAgain {

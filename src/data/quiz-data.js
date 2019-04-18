@@ -66,7 +66,7 @@ const QUESTION_DATA = [
       <span>Minas Morgul & Poudlard</span>,
       <span>C'est dans ton propre subsconscient</span>
     ],
-    correct: 3
+    correct: 1
   },
   {
     question: <span>Est-ce que Gandalf est connecté ?</span>,
@@ -88,7 +88,7 @@ const QUESTION_DATA = [
   {
     question: <span>Sur Chrome, dans la barre de recherche Google, que se passe-t-il si on tape "zerg rush"</span>,
     answers: [
-      <span>La page se fait détruire par des « O </span>,
+      <span>La page se fait détruire par des "O"</span>,
       <span>Un zerg apparaît et enlève les mots du résultat de la recherche</span>,
       <span>Jacky Chan & Christ Tucker apparaissent en gif</span>,
     ],

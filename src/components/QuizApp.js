@@ -88,22 +88,22 @@ class QuizApp extends Component {
 
     switch (tries) {
       case 0: {
-        praise = "T'es le meilleur !";
+        praise = "Fier de toi disciple";
         points = '+10 oeufs';
         break;
       }
       case 1: {
-        praise = '2nd Try!';
+        praise = 'Bravo machine !';
         points = '+5 oeufs';
         break;
       }
       case 2: {
-        praise = 'Correct!';
+        praise = 'Et ça passe!';
         points = '+2 oeufs';
         break;
       }
       default: {
-        praise = 'Correct!';
+        praise = 'Tu feras mieux la prochaine fois';
         points = '+1 oeuf';
       }
     }
@@ -169,7 +169,7 @@ class QuizApp extends Component {
           handleAnswerClick={this.handleAnswerClick}
           handleEnterPress={this.handleEnterPress}
         />
-        { modal.state === 'show' && <Modal modal={modal} /> }
+        {modal.state === 'show' && <Modal modal={modal} />}
       </Fragment>
     );
   }

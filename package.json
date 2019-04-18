@@ -4,20 +4,10 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
-<<<<<<< HEAD
-    "pacman-react": "0.0.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.8",
-    "react-svg-inline": "^2.1.1"
-=======
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8"
->>>>>>> 4f9d126d2248809f8dec10218968e045a1cb301f
   },
   "scripts": {
     "start": "react-scripts start",

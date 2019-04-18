@@ -150,7 +150,6 @@ class QuizApp extends Component {
 
   render() {
     const { step, questions, userAnswers, totalQuestions, score, modal } = this.state;
-    const { characters } = this.props;
 
     if (step >= totalQuestions + 1) {
       return (

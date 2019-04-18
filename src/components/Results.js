@@ -51,6 +51,7 @@ class Results extends Component {
         <div style={{ textAlign: 'left', color: 'blue' }}>
         </div>
         <h2>Tableau des scores</h2>
+        <a href='http://localhost:8080/' target="_blank" rel="noopener noreferrer">Pacman</a>
       </div>
     );
   }

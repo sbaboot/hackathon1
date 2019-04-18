@@ -32,7 +32,7 @@ class App extends Component {
     return (
       <div className="App">
         <Switch>
-          <Route path="/Quiz" render={props => <QuizApp {...props} totalQuestions={5} characters={this.state.characters} />} />
+          <Route path="/Quiz" render={props => <QuizApp {...props} totalQuestions={1} characters={this.state.characters} />} />
           <Route path="/" render={props => <Home {...props} characters={this.state.characters} chooseYourCharacter={this.chooseYourCharacter} />} />
         </Switch>
       </div>

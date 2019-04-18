@@ -12,7 +12,7 @@ class Home extends Component {
           <div className="headerOverlay">
             <h1 className="headerTitle">A la recherche de l'oeuf cosmique</h1>
             <h5 className="headerText">
-              Repondez juste aux différentes questions pour obtenir le plus
+              Reponds correctement aux différentes questions pour obtenir le plus
               d'oeufs, et peut-être ... l'Oeuf Cosmique !
             </h5>
             <Row>

@@ -30,7 +30,7 @@ class Home extends Component {
       <div className="header">
         <div className="borderTitle">
           <div className="headerOverlay">
-            <h1 className="headerTitle">Chasse aux oeufs</h1>
+            <h1 className="headerTitle">A la recherche de l'oeuf cosmique</h1>
             <h5 className="headerText">
               Repondez juste aux différentes questions pour obtenir le plus
               d'oeufs, et peut-être ... l'Oeuf Cosmique !

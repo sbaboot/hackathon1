@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import '../style.css';
 
 class Results extends Component {
   constructor(props) {

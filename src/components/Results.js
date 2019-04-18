@@ -39,15 +39,20 @@ class Results extends Component {
 
   render() {
     const { eggs } = this.state;
-    return (
-      <div className="results-container">
-        <h2>Resultat du quiz</h2>
-        <img src={eggs.image} alt="eggs" />
-        <div>Tu as gagné un {eggs.name}</div>
-        <div className="results-total">Tu as <strong>{this.props.score}</strong> oeufs au total !</div>
-        <a onClick={this.props.restartQuiz}>Recommencer la chasse aux oeufs !</a>
-      </div>
-    );
+    let scoreBoard = [];
+    if (this.props.score)
+      return (
+        <div className="results-container">
+          <h2>Resultat du quiz</h2>
+          <img src={eggs.image} alt="eggs" />
+          <div>Tu as gagné un {eggs.name}</div>
+          <div className="results-total">Tu as <strong>{this.props.score}</strong> oeufs au total !</div>
+          <a onClick={this.props.restartQuiz}>Recommencer la chasse aux oeufs !</a>
+          <div style={{ textAlign: 'left', color: 'blue' }}>
+          </div>
+          <h2>Tableau des scores</h2>
+        </div>
+      );
   }
 }
 

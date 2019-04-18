@@ -1,26 +1,54 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import tally from '../helpers/tally';
+import axios from 'axios';
 
-const Results = ({ userAnswers, score, restartQuiz }) => {
-  const triesTotal = tally(userAnswers);
-  const oneTry = triesTotal[1] && <div><strong>{triesTotal[1]}</strong> on the first try.</div>;
-  const twoTries = triesTotal[2] && <div><strong>{triesTotal[2]}</strong> on the second try.</div>;
-  const threeTries = triesTotal[3] && <div><strong>{triesTotal[3]}</strong> on the third try.</div>;
-  const fourTries = triesTotal[4] && <div><strong>{triesTotal[4]}</strong> on the fourth try.</div>;
-  
-  return (
-    <div className="results-container">
-      <h2>Quiz Results</h2>
-      <div>You answered...</div>
-      {oneTry}
-      {twoTries}
-      {threeTries}
-      {fourTries}
-      <div className="results-total">Your Total Score is <strong>{score}</strong>.</div>
-      <a onClick={restartQuiz}>Restart Quiz</a>
-    </div>
-  );
+class Results extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      eggs: {}
+    };
+  }
+
+  componentDidMount() {
+    let eggId;
+    if (this.props.score >= 50) {
+      eggId = '5cac51240d488f0da6151bf1';
+    } else if (this.props.score >= 40) {
+      eggId = '5cac51240d488f0da6151c0e';
+    } else if (this.props.score >= 30) {
+      eggId = '5cac51240d488f0da6151bff';
+    } else if (this.props.score >= 20) {
+      eggId = '5cac51240d488f0da6151bf3';
+    } else if (this.props.score >= 10) {
+      eggId = '5cac51240d488f0da6151c27';
+    } else if (this.props.score >= 5) {
+      eggId = '5cac51240d488f0da6151bf9';
+    } else {
+      eggId = '5cac51240d488f0da6151bea';
+    }
+
+    axios(`http://easteregg.wildcodeschool.fr/api/eggs/${eggId}`)
+      .then(response => response.data)
+      .then(data => {
+        this.setState({
+          eggs: data
+        });
+      });
+  }
+
+  render() {
+    const { eggs } = this.state;
+    return (
+      <div className="results-container">
+        <h2>Resultat du quiz</h2>
+        <img src={eggs.image} alt="eggs" />
+        <div>Tu as gagné un {eggs.name}</div>
+        <div className="results-total">Tu as <strong>{this.props.score}</strong> oeufs au total !</div>
+        <a onClick={this.props.restartQuiz}>Recommencer la chasse aux oeufs !</a>
+      </div>
+    );
+  }
 }
 
 Results.propTypes = {

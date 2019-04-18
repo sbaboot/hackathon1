@@ -10,7 +10,10 @@ body {
   width: 100%;
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 9px;
-  background: rgb(249,219,61);
+  background-image: url('https://cdn.pixabay.com/photo/2012/12/16/11/18/celebration-70199_960_720.jpg');
+  background-size : 100%;
+  background-repeat: no-repeat;
+  height: 50%;
   color: #222;
   margin: 0;
   padding: 0;
@@ -37,6 +40,17 @@ header {
   padding-top: 20px;
 }
 
+.App .question {
+  text-align: left;
+}
+
+.question-title {
+  text-align: center;
+}
+.wrapper header {
+  color: white;
+}
+
 ul {
   padding: 0;  
 }
@@ -61,7 +75,6 @@ code {
 
 .score-container, .question-count {
   width: 250px;
-  text-align: center;
 }
 
 .score-container h2, .question-count h2 {
@@ -134,7 +147,13 @@ code {
   font-size: 1.75em;
   line-height: 1.75em;
   animation: slide-in .4s ease;
+  margin-bottom: 2%;
+  margin-top: 2%;
 }
+
+img {
+  height: 450px;
+} 
 
 .results-total {
   margin-top: 15px;
@@ -189,7 +208,7 @@ code {
   font-size: 5em;
   text-align: center;
   width: 100%;
-  background: rgb(252, 235, 148);
+  background: rgb(106, 226, 146);
   padding: 5%;
   will-change: transform;
   transform: scale(4);

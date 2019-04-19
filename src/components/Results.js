@@ -66,7 +66,7 @@ class Results extends Component {
                   <th>#</th>
                   <th>Nom</th>
                   <th>Score</th>
-                  <th>Timer</th>
+                  <th>Timer (en secondes)</th>
                 </tr>
               </thead>
               <tbody>
@@ -87,14 +87,26 @@ class Results extends Component {
                       Pacman
                     </a>
                   </td>
-                  <td>10 oeufs</td>
-                  <td>30</td>
+                  <td>20 oeufs</td>
+                  <td>40</td>
                 </tr>
                 <tr>
                   <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>5 oeufs</td>
+                  <td>Link</td>
+                  <td>19 oeufs</td>
+                  <td>45</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Pikachu</td>
+                  <td>10 oeufs</td>
                   <td>60</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Le pongiste</td>
+                  <td>5 oeufs</td>
+                  <td>90</td>
                 </tr>
               </tbody>
             </Table>

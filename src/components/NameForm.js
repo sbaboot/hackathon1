@@ -7,21 +7,15 @@ class NameForm extends React.Component {
     this.state = { value: '' };
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
     this.setState({ value: event.target.value });
   }
 
-  handleSubmit(event) {
-    alert('Le nom a été soumis : ' + this.state.value);
-    event.preventDefault();
-  }
-
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleChange}>
         <label style={{ color: 'black' }}>
           Entre ton pseudo:
           <input type="text" value={this.state.value} onChange={this.handleChange} />

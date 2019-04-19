@@ -1,17 +1,25 @@
 import React, { Component } from 'react';
 import QuizApp from './components/QuizApp';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
 import './App.css';
 import './style.css';
+import NameForm from './components/NameForm';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      characters: {}
+      characters: {},
+      value: '',
     };
     this.chooseYourCharacter = this.chooseYourCharacter.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+
+  }
+
+  handleChange(event) {
+    this.setState({ value: event.target.value });
   }
 
   componentDidMount() {
@@ -28,14 +36,16 @@ class App extends Component {
         });
       });
   }
+
   render() {
     return (
       <div className="App">
+
         <Switch>
-          <Route path="/Quiz" render={props => <QuizApp {...props} totalQuestions={1} characters={this.state.characters} pseudo={this.state.value} />} />
+          <Route path="/Quiz" render={props => <QuizApp {...props} totalQuestions={1} characters={this.state.characters} value={this.state.value} />} />
           <Route path="/" render={props => <Home {...props} characters={this.state.characters} chooseYourCharacter={this.chooseYourCharacter} />} />
         </Switch>
-      </div>
+      </div >
     );
   }
 }

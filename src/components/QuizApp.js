@@ -168,6 +168,7 @@ class QuizApp extends Component {
           restartQuiz={this.restartQuiz}
           userAnswers={userAnswers}
           seconds={seconds}
+          value={value}
         />
       );
     } else return (

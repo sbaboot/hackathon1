@@ -44,7 +44,7 @@ class App extends Component {
       <div className="App">
 
         <Switch>
-          <Route path="/Quiz" render={props => <QuizApp {...props} totalQuestions={1} characters={this.state.characters} value={this.state.value} />} />
+          <Route path="/Quiz" render={props => <QuizApp {...props} totalQuestions={5} characters={this.state.characters} value={this.state.value} />} />
           <Route path="/" render={props => <Home {...props} characters={this.state.characters} chooseYourCharacter={this.chooseYourCharacter} keepPseudo={this.keepPseudo} />} />
         </Switch>
       </div >

@@ -72,7 +72,7 @@ class Results extends Component {
               <tbody>
                 <tr>
                   <th scope="row">1</th>
-                  <td>Mark</td>
+                  <td>{this.props.value}</td>
                   <td>{this.props.score} oeufs</td>
                   <td>{this.props.seconds}</td>
                 </tr>

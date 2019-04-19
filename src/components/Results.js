@@ -68,20 +68,20 @@ class Results extends Component {
                 <tr>
                   <th scope="row">1</th>
                   <td>Mark</td>
-                  <td>Otto</td>
+                  <td>{this.props.score} oeufs</td>
                   <td>{this.props.seconds}</td>
                 </tr>
                 <tr>
                   <th scope="row">2</th>
                   <td><a href='http://localhost:8080/' target="_blank" rel="noopener noreferrer">Pacman</a></td>
-                  <td>Thornton</td>
-                  <td>{this.props.seconds}</td>
+                  <td>10 oeufs</td>
+                  <td>30</td>
                 </tr>
                 <tr>
                   <th scope="row">3</th>
                   <td>Larry</td>
-                  <td>the Bird</td>
-                  <td>{this.props.seconds}</td>
+                  <td>5 oeufs</td>
+                  <td>60</td>
                 </tr>
               </tbody>
             </Table>

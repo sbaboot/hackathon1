@@ -34,6 +34,10 @@ h2 {
   margin: 0 0 20rem;
 }
 
+.results-container h2 {
+  margin-top: 2%;
+}
+
 .App .question {
   text-align: left;
 }
@@ -156,7 +160,8 @@ img {
 } 
 
 .results-total {
-  margin-top: 15px;
+  margin-top: 1%;
+  margin-bottom: 12%;
   font-size: 1.1em;
 }
 
@@ -171,7 +176,8 @@ img {
   transition: background .1s;
 }
 
-.restart-chasse {
+.results .restart-chasse {
+  padding-top: 2%;
   border: solid;
 }
 

@@ -48,6 +48,7 @@ class Results extends Component {
         <img className="image-egg" src={eggs.image} alt="eggs" />
         <div className="results">
           <div>Tu as gagné un {eggs.name}</div>
+          <div>Tu as fini en {this.props.seconds} secondes !</div>
           <div className="results-total">Tu as <strong>{this.props.score}</strong> oeufs au total !</div>
           <a className="restart-chasse" onClick={this.props.restartQuiz}>Recommencer la chasse aux oeufs !</a>
           <div style={{ textAlign: 'left', color: 'blue' }}>
@@ -68,19 +69,19 @@ class Results extends Component {
                   <th scope="row">1</th>
                   <td>Mark</td>
                   <td>Otto</td>
-                  <td></td>
+                  <td>{this.props.seconds}</td>
                 </tr>
                 <tr>
                   <th scope="row">2</th>
                   <td><a href='http://localhost:8080/' target="_blank" rel="noopener noreferrer">Pacman</a></td>
                   <td>Thornton</td>
-                  <td></td>
+                  <td>{this.props.seconds}</td>
                 </tr>
                 <tr>
                   <th scope="row">3</th>
                   <td>Larry</td>
                   <td>the Bird</td>
-                  <td></td>
+                  <td>{this.props.seconds}</td>
                 </tr>
               </tbody>
             </Table>

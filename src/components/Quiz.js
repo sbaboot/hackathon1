@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import QuestionList from './QuestionList';
+import Timer from './Timer';
 
-const Quiz = ({ step, questions, totalQuestions, score, handleAnswerClick, handleEnterPress }) => {
+const Quiz = ({ step, questions, totalQuestions, score, handleAnswerClick, handleEnterPress, setSeconds }) => {
   return (
     <div className="wrapper">
       <header>
@@ -25,6 +26,9 @@ const Quiz = ({ step, questions, totalQuestions, score, handleAnswerClick, handl
           handleAnswerClick={handleAnswerClick}
           handleEnterPress={handleEnterPress}
         />
+      </div>
+      <div className="timer">
+        <Timer setSeconds={setSeconds} />
       </div>
     </div>
   );

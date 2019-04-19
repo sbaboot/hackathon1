@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Timer extends React.Component {
+class Timer extends Component {
   constructor(props) {
     super(props);
     this.state = {

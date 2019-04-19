@@ -4,7 +4,6 @@ import { Switch, Route, withRouter } from 'react-router-dom';
 import Home from './components/Home';
 import './App.css';
 import './style.css';
-import NameForm from './components/NameForm';
 
 class App extends Component {
   constructor(props) {

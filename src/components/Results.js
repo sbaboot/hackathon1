@@ -83,7 +83,7 @@ class Results extends Component {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Pacman
+                      Paques-Man
                     </a>
                   </td>
                   <td>20 oeufs</td>

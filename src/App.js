@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import QuizApp from './components/QuizApp';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, withRouter } from 'react-router-dom';
 import Home from './components/Home';
 import './App.css';
 import './style.css';
@@ -9,9 +9,18 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      characters: {}
+      characters: {},
+      value: '',
     };
     this.chooseYourCharacter = this.chooseYourCharacter.bind(this);
+    this.keepPseudo = this.keepPseudo.bind(this);
+
+  }
+
+  keepPseudo(pseudo) {
+    console.log(pseudo)
+    this.setState({ value: pseudo });
+    this.props.history.push('/Quiz')
   }
 
   componentDidMount() {
@@ -28,16 +37,18 @@ class App extends Component {
         });
       });
   }
+
   render() {
     return (
       <div className="App">
+
         <Switch>
-          <Route path="/Quiz" render={props => <QuizApp {...props} totalQuestions={1} characters={this.state.characters} />} />
-          <Route path="/" render={props => <Home {...props} characters={this.state.characters} chooseYourCharacter={this.chooseYourCharacter} />} />
+          <Route path="/Quiz" render={props => <QuizApp {...props} totalQuestions={5} characters={this.state.characters} value={this.state.value} />} />
+          <Route path="/" render={props => <Home {...props} characters={this.state.characters} chooseYourCharacter={this.chooseYourCharacter} keepPseudo={this.keepPseudo} />} />
         </Switch>
-      </div>
+      </div >
     );
   }
 }
 
-export default App;
+export default withRouter(App);

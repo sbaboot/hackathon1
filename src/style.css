@@ -4,15 +4,16 @@
 
 html, body, #app, div[data-reactroot] {
   height: 100%;
+  background-image: url('./images/celebration-70199_960_720.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 body {
   width: 100%;
+  display: block;
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 9px;
-  background-image: url('./images/celebration-70199_960_720.jpg');
-  background-size : 100%;
-  background-repeat: no-repeat;
   height: 50%;
   color: #222;
   margin: 0;
@@ -26,11 +27,16 @@ h1 {
   text-transform: uppercase;
   letter-spacing: -1px;
   text-align: center;
+  font-family: 'Handlee', cursive;
 }
 
 h2 {
-  font-size: 1rem;
-  margin: 0 0 15px;
+  font-size: 1.25em;
+  margin: 0 0 20rem;
+}
+
+.results-container h2 {
+  margin-top: 2%;
 }
 
 .App .question {
@@ -52,7 +58,7 @@ h2 {
 }
 
 ul {
-  padding: 0;  
+  padding: 0;
 }
 
 p {
@@ -68,13 +74,15 @@ code {
   font-size: .8em;
   font-weight: 100;
   pointer-events: none;
-  background: rgba(0,0,0,.09);
+  background: rgba(0, 0, 0, .09);
   padding: 3px 4px;
   margin: 0 2px;
 }
 
 .score-container, .question-count {
   width: 250px;
+  padding: 10px;
+  background-color: rgba(0, 195, 255, 0.397)
 }
 
 .score-container h2, .question-count h2 {
@@ -95,6 +103,7 @@ code {
 .questions {
   width: 85%;
   margin: 35px auto 0;
+  padding: 20px;
 }
 
 .question {
@@ -123,8 +132,14 @@ code {
 }
 
 @keyframes slide-in {
-  0%   { opacity: 0; transform: translate3d(40%, 0, 0); }
-  100% { opacity: 1; transform: none; }
+  0% {
+    opacity: 0;
+    transform: translate3d(40%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .question {
@@ -138,55 +153,66 @@ code {
 
 .results-container {
   width: 100%;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   flex-direction: column;
-  height: 100%;
   font-size: 1.75em;
   line-height: 1.75em;
   animation: slide-in .4s ease;
-  margin-bottom: 2%;
-  margin-top: 2%;
+  background-image: url('./images/celebration-70199_960_720.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 img {
   height: 450px;
-} 
+}
 
 .results-total {
-  margin-top: 15px;
+  margin-top: 1%;
+  margin-bottom: 12%;
   font-size: 1.1em;
 }
 
 .results-container a {
+  color: white;
+  text-decoration: none;
   position: relative;
   padding: 15px 30px;
   margin-top: 30px;
-  border: 3px solid #111;
   background: none;
   cursor: pointer;
-  font-size: .75em;
   transition: background .1s;
 }
 
-.results-container a:hover {
-  background: rgba(255,255,255,.1);
+.results .restart-chasse {
+  padding-top: 2%;
+  border: solid;
 }
 
-.results-container a:active, {
-  background: rgba(255,255,255,.5);
-  top: -2px;
+.results-container a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.results-container a:hover {
+  background: rgba(255, 255, 255, .1);
+}
+
+.tableau-score {
+  padding-top: 20%;
+  padding-bottom: 10%;
 }
 
 .wrong {
-  background: rgba(236,100,75,.5);
-  animation: shake 0.5s cubic-bezier(.35,.05,.20,.99) both;
+  background: rgba(236, 100, 75, .5);
+  animation: shake 0.5s cubic-bezier(.35, .05, .20, .99) both;
 }
 
 .right {
-  background: rgba(135,211,124,.5);
+  background: rgba(135, 211, 124, .5);
 }
 
 @keyframes shake {
@@ -273,27 +299,21 @@ img {
   body {
     font-size: 14px;
   }
-
   h1 {
     font-size: 3em;
   }
-
   header {
     padding: 50px 0 30px;
   }
-
   .questions {
     width: 75%;
   }
-
   .question-answer:hover {
-    border-color: rgba(0,0,0,.5);
+    border-color: rgba(0, 0, 0, .5);
   }
-
   .question-answer:focus {
     outline: gray solid 1px;
   }
-
   .correct-modal {
     height: 300px;
   }
@@ -303,7 +323,6 @@ img {
   body {
     font-size: 16px;
   }
-
   .correct-modal {
     height: 400px;
   }

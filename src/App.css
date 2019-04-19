@@ -1,26 +1,27 @@
 /*Home */
 
 .header {
-  background-image: url('./images/celebration-70199_960_720.jpg'); 
-  background-size : 100%; 
+  background-image: url('./images/celebration-70199_960_720.jpg');
+  background-size: 100%;
   background-repeat: no-repeat;
   font-family: 'Handlee', cursive;
 }
 
 .wrapper {
-font-family: 'Handlee';
-font-size: 0.8rem;
+  font-family: 'Handlee';
+  font-size: 0.8rem;
 }
 
 .results-container {
   font-family: 'Handlee';
-  }
+}
 
-.borderTitle { 
-  color : white;
+.borderTitle {
+  color: white;
   text-align: center;
   padding: 5% 7% 7% 7%;
 }
+
 .today {
   font-size: 1.5rem;
 }
@@ -28,15 +29,17 @@ font-size: 0.8rem;
 .characterName {
   font-size: 2rem;
 }
+
 .headerTitle {
-  font-size : 2rem; 
+  font-size: 2rem;
   text-align: center;
 }
 
 .headerText {
-  font-size : 1.5rem;
+  font-size: 1.5rem;
   text-align: center;
 }
+
 @media screen and (max-width: 580px) {
   .headerTitle, .headerText {
     font-size: 1rem;
@@ -50,20 +53,26 @@ font-size: 0.8rem;
 }
 
 .charactersImg {
-  border-radius : 100%; 
-  width: 15rem; 
-  height : 20rem;
-  object-fit: cover; 
+  border-radius: 100%;
+  width: 15rem;
+  height: 20rem;
+  object-fit: cover;
 }
 
 .btnTryAgain {
-  margin-top : 2rem; 
-  margin-bottom: 2rem; 
-  text-align : center; 
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .btnLetsGo {
-  margin-top : 2rem; 
-  margin-bottom: 2rem; 
-  text-align : center; 
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.timer {
+  text-align: center;
+  right: 1 rem;
+  font-size: 1.5rem;
 }

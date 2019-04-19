@@ -8,19 +8,14 @@ class Timer extends React.Component {
       isOn: false,
     };
     this.tick = this.tick.bind(this)
-    this.stopTimer = this.stopTimer.bind(this)
   }
 
   tick() {
     this.setState((prevState) => ({
       isOn: true,
       seconds: prevState.seconds + 1,
-    }));
-  }
-
-  stopTimer() {
-    this.setState({ isOn: false })
-    clearInterval(this.interval)
+    }), () => this.props.setSeconds(this.state.seconds)
+    );
   }
 
   componentDidMount() {
@@ -36,7 +31,6 @@ class Timer extends React.Component {
       <React.Fragment>
         <span>Tu as commencé il y a déjà : </span>
         <div>{this.state.seconds} secondes !</div>
-        <button onClick={this.stopTimer}>Stop</button>
       </React.Fragment>
     );
   }

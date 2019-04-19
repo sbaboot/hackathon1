@@ -148,8 +148,15 @@ class QuizApp extends Component {
     });
   };
 
+  setSeconds = (seconds) => {
+    console.log(seconds)
+    this.setState({
+      seconds: seconds
+    })
+  }
+
   render() {
-    const { step, questions, userAnswers, totalQuestions, score, modal } = this.state;
+    const { step, questions, userAnswers, totalQuestions, score, modal, seconds } = this.state;
 
     if (step >= totalQuestions + 1) {
       return (
@@ -157,6 +164,7 @@ class QuizApp extends Component {
           score={score}
           restartQuiz={this.restartQuiz}
           userAnswers={userAnswers}
+          seconds={seconds}
         />
       );
     } else return (
@@ -182,6 +190,7 @@ class QuizApp extends Component {
           score={score}
           handleAnswerClick={this.handleAnswerClick}
           handleEnterPress={this.handleEnterPress}
+          setSeconds={this.setSeconds}
         />
         {modal.state === 'show' && <Modal modal={modal} />}
       </Fragment>

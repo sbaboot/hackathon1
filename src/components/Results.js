@@ -46,6 +46,7 @@ class Results extends Component {
         <h2>Resultat du quiz</h2>
         <img src={eggs.image} alt="eggs" />
         <div>Tu as gagné un {eggs.name}</div>
+        <div>Tu as fini en {this.props.seconds} secondes !</div>
         <div className="results-total">Tu as <strong>{this.props.score}</strong> oeufs au total !</div>
         <a onClick={this.props.restartQuiz}>Recommencer la chasse aux oeufs !</a>
         <div style={{ textAlign: 'left', color: 'blue' }}>

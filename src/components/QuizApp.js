@@ -177,7 +177,7 @@ class QuizApp extends Component {
             objectFit: 'cover'
           }}
         />
-        <p>{this.props.value}</p>
+        <p style={{ color: 'white' }}>{this.props.value}</p>
         <Quiz
           step={step}
           questions={questions}

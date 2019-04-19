@@ -45,7 +45,7 @@ class Home extends Component {
               >
                 Choisis un autre avatar
               </Button>
-              <NameForm />
+              <NameForm keepPseudo={this.props.keepPseudo} />
             </Container>
           </div>
         </div>

@@ -7,6 +7,11 @@ class NameForm extends React.Component {
     this.state = { value: '' };
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleSubmit(event) {
+    event.preventDefault()
+    this.props.keepPseudo(this.state.value)
   }
 
   handleChange(event) {
@@ -15,14 +20,12 @@ class NameForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleChange}>
+      <form onSubmit={this.handleSubmit}>
         <label style={{ color: 'black' }}>
           Entre ton pseudo:
           <input type="text" value={this.state.value} onChange={this.handleChange} />
         </label>
-        <Link to="/Quiz">
-          <input type="submit" value="C'est parti" className="bg-warning" style={{ borderRadius: '5px' }} />
-        </Link>
+        <input type="submit" value="C'est parti" className="bg-warning" style={{ borderRadius: '5px' }} />
       </form>
     );
   }

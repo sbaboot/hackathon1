@@ -17,12 +17,12 @@ class Home extends Component {
             </h5>
             <Row>
               <Col className="col-lg-12 projet-titre">
-                <h2 className="orange-color">Aujourd'hui je joue avec :</h2>
+                <h2 className="today">Aujourd'hui je joue avec :</h2>
               </Col>
             </Row>
             <Container>
-              <div className="title col-md-12 col-sm-12 col-12 p-4 name">
-                <h2>{characters.name}</h2>
+              <div className="title col-md-12 col-sm-12 col-12 p-4 name ">
+                <h2 className='characterName'>{characters.name}</h2>
               </div>
               <br />
               <Row>

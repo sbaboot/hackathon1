@@ -6,6 +6,9 @@ import Results from './Results';
 import shuffleQuestions from '../helpers/shuffleQuestions';
 import QUESTION_DATA from '../data/quiz-data';
 
+
+
+
 class QuizApp extends Component {
   state = {
     ...this.getInitialState(this.props.totalQuestions)
@@ -150,7 +153,6 @@ class QuizApp extends Component {
 
   render() {
     const { step, questions, userAnswers, totalQuestions, score, modal } = this.state;
-
     if (step >= totalQuestions + 1) {
       return (
         <Results
@@ -172,9 +174,9 @@ class QuizApp extends Component {
             width: '8rem',
             height: '10rem',
             objectFit: 'cover'
-
           }}
         />
+
         <Quiz
           step={step}
           questions={questions}

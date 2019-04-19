@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import { Link } from "react-router-dom";
+import { Button } from "reactstrap";
 
 class Results extends Component {
   constructor(props) {
@@ -43,6 +45,9 @@ class Results extends Component {
 
     return (
       <div className="results-container">
+        <Link to="/" class>
+          <Button className="btnLetsGo" color="success">Retour à l'accueil</Button>
+        </Link>
         <h2>Resultat du quiz</h2>
         <img src={eggs.image} alt="eggs" />
         <div>Tu as gagné un {eggs.name}</div>

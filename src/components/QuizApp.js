@@ -88,7 +88,7 @@ class QuizApp extends Component {
 
     switch (tries) {
       case 0: {
-        praise = "Fier de toi disciple";
+        praise = "Fier de toi disciple !";
         points = '+10 oeufs';
         break;
       }
@@ -98,12 +98,12 @@ class QuizApp extends Component {
         break;
       }
       case 2: {
-        praise = 'Et ça passe!';
+        praise = 'Et ça passe !';
         points = '+2 oeufs';
         break;
       }
       default: {
-        praise = 'Tu feras mieux la prochaine fois';
+        praise = 'Tu feras mieux la prochaine fois...';
         points = '+1 oeuf';
       }
     }

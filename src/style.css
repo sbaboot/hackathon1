@@ -4,15 +4,16 @@
 
 html, body, #app, div[data-reactroot] {
   height: 100%;
+  background-image: url('./images/celebration-70199_960_720.jpg');
+  background-size : cover;
+  background-repeat: no-repeat;
 }
 
 body {
   width: 100%;
+  display: block;
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 9px;
-  background-image: url('./images/celebration-70199_960_720.jpg');
-  background-size : 100%;
-  background-repeat: no-repeat;
   height: 50%;
   color: #222;
   margin: 0;
@@ -30,7 +31,7 @@ h1 {
 
 h2 {
   font-size: 1.25em;
-  margin: 0 0 15px;
+  margin: 0 0 20rem;
 }
 
 .App .question {
@@ -137,17 +138,17 @@ code {
 
 .results-container {
   width: 100%;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   flex-direction: column;
-  height: 100%;
   font-size: 1.75em;
   line-height: 1.75em;
   animation: slide-in .4s ease;
-  margin-bottom: 2%;
-  margin-top: 2%;
+  background-image: url('./images/celebration-70199_960_720.jpg');
+  background-size : cover;
+  background-repeat: no-repeat;
 }
 
 img {
@@ -160,23 +161,32 @@ img {
 }
 
 .results-container a {
+  color: white;
+  text-decoration: none;
   position: relative;
   padding: 15px 30px;
   margin-top: 30px;
-  border: 3px solid #111;
   background: none;
   cursor: pointer;
-  font-size: .75em;
   transition: background .1s;
+}
+
+.restart-chasse {
+  border: solid;
+}
+
+.results-container a:hover {
+  color: white;
+  text-decoration: none;
 }
 
 .results-container a:hover {
   background: rgba(255,255,255,.1);
 }
 
-.results-container a:active, {
-  background: rgba(255,255,255,.5);
-  top: -2px;
+.tableau-score {
+  padding-top: 20%;
+  padding-bottom: 10%;
 }
 
 .wrong {

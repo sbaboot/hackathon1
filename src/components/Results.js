@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import { Table } from 'reactstrap';
 
 class Results extends Component {
   constructor(props) {
@@ -44,14 +45,47 @@ class Results extends Component {
     return (
       <div className="results-container">
         <h2>Resultat du quiz</h2>
-        <img src={eggs.image} alt="eggs" />
-        <div>Tu as gagné un {eggs.name}</div>
-        <div className="results-total">Tu as <strong>{this.props.score}</strong> oeufs au total !</div>
-        <a onClick={this.props.restartQuiz}>Recommencer la chasse aux oeufs !</a>
-        <div style={{ textAlign: 'left', color: 'blue' }}>
+        <img className="image-egg" src={eggs.image} alt="eggs" />
+        <div className="results">
+          <div>Tu as gagné un {eggs.name}</div>
+          <div className="results-total">Tu as <strong>{this.props.score}</strong> oeufs au total !</div>
+          <a className="restart-chasse" onClick={this.props.restartQuiz}>Recommencer la chasse aux oeufs !</a>
+          <div style={{ textAlign: 'left', color: 'blue' }}>
+          </div>
+          <div className="tableau-score">
+            <h2>Tableau des scores</h2>
+            <Table dark>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Nom</th>
+                  <th>Score</th>
+                  <th>Timer</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td><a href='http://localhost:8080/' target="_blank" rel="noopener noreferrer">Pacman</a></td>
+                  <td>Thornton</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </Table>
+          </div>
         </div>
-        <h2>Tableau des scores</h2>
-        <a href='http://localhost:8080/' target="_blank" rel="noopener noreferrer">Pacman</a>
       </div>
     );
   }

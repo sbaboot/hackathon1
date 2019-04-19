@@ -153,6 +153,7 @@ class QuizApp extends Component {
 
   render() {
     const { step, questions, userAnswers, totalQuestions, score, modal } = this.state;
+    const { value } = this.props;
     if (step >= totalQuestions + 1) {
       return (
         <Results
@@ -176,7 +177,7 @@ class QuizApp extends Component {
             objectFit: 'cover'
           }}
         />
-
+        <p>{this.props.value}</p>
         <Quiz
           step={step}
           questions={questions}

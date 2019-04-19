@@ -41,7 +41,7 @@ class Results extends Component {
 
   render() {
     const { eggs } = this.state;
-    // let scoreBoard = [];
+    let scoreBoard = [];
 
     return (
       <div className="results-container">

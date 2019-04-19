@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Button } from "reactstrap";
-import { Link } from "react-router-dom";
 import "../App.css";
+import NameForm from "./NameForm";
 
 class Home extends Component {
   render() {
@@ -45,12 +45,7 @@ class Home extends Component {
               >
                 Choisis un autre avatar
               </Button>
-
-              <Link to="/Quiz">
-                <Button className="btnLetsGo" color="success">
-                  C'est parti !!
-                </Button>
-              </Link>
+              <NameForm />
             </Container>
           </div>
         </div>

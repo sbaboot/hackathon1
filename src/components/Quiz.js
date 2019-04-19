@@ -12,7 +12,7 @@ const Quiz = ({ step, questions, totalQuestions, score, handleAnswerClick, handl
           <div className="question-number">{step}</div>
           <div className="description">sur <span>{totalQuestions}</span></div>
         </div>
-        <h2 style={{ marginTop: '10rem' }}>Réponds correctement aux questions et notre gouroux te récompensera</h2>
+        <h2 style={{ marginTop: '10rem', fontSize: '1.5rem' }}>Réponds correctement aux questions et notre gouroux te récompensera</h2>
         <div className="score-container">
           <h2>Score</h2>
           <div className="score">{score}</div>

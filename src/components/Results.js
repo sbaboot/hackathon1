@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import { Table } from 'reactstrap';
+import { Link } from "react-router-dom";
+import { Button } from "reactstrap";
 
 class Results extends Component {
   constructor(props) {
@@ -40,10 +42,13 @@ class Results extends Component {
 
   render() {
     const { eggs } = this.state;
-    // let scoreBoard = [];
+    let scoreBoard = [];
 
     return (
       <div className="results-container">
+        <Link to="/" class>
+          <Button className="btnLetsGo" color="success">Retour à l'accueil</Button>
+        </Link>
         <h2>Resultat du quiz</h2>
         <img className="image-egg" src={eggs.image} alt="eggs" />
         <div className="results">

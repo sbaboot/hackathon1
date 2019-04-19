@@ -9,6 +9,7 @@
 
 .wrapper {
 font-family: 'Handlee';
+font-size: 0.8rem;
 }
 
 .results-container {
@@ -20,9 +21,15 @@ font-family: 'Handlee';
   text-align: center;
   padding: 5% 7% 7% 7%;
 }
+.today {
+  font-size: 1.5rem;
+}
 
+.characterName {
+  font-size: 2rem;  
+}
 .headerTitle {
-  font-size : 3rem; 
+  font-size : 2rem; 
   text-align: center;
 }
 
